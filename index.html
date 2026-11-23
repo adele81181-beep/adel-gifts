@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>אדל אדרי | מתנות באהבה</title>
+<meta name="description" content="מתנות קטנות שאדל אדרי מעניקה באהבה: האפליקציה מילים טובות והפלייליסט השראה ותודעה">
+<meta property="og:title" content="אדל אדרי | מתנות באהבה">
+<meta property="og:description" content="מתנות קטנות שאני מעניקה לך באהבה 🤍">
+<meta property="og:image" content="https://adeleedry-milim-tovot.netlify.app/adel.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700&family=Heebo:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #F5F1E8;
+    --paper: #FBF8F2;
+    --sand: #EADFD0;
+    --brown: #8D6E63;
+    --espresso: #3E2723;
+    --ink: #111111;
+    --rose: #C9A9A0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: 'Heebo', sans-serif;
+    font-weight: 300;
+    background: var(--cream);
+    color: var(--espresso);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px 40px;
+  }
+  .wrap { width: 100%; max-width: 460px; }
+
+  /* כותרת */
+  header { text-align: center; margin-bottom: 36px; }
+  .avatar {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    margin: 0 auto 18px;
+    border: 3px solid var(--paper);
+    box-shadow: 0 0 0 1px var(--sand), 0 8px 24px rgba(62, 39, 35, 0.10);
+  }
+  .brand {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 500;
+    font-size: 2.1rem;
+    letter-spacing: 0.5px;
+    color: var(--espresso);
+  }
+  .tagline {
+    font-size: 0.95rem;
+    color: var(--brown);
+    letter-spacing: 2px;
+    margin-top: 2px;
+  }
+  .divider {
+    width: 48px; height: 1px;
+    background: var(--brown);
+    margin: 22px auto;
+    opacity: 0.6;
+  }
+  .intro {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: var(--espresso);
+  }
+
+  /* כרטיסי מתנה */
+  .gift {
+    background: var(--paper);
+    border: 1px solid var(--sand);
+    border-radius: 20px;
+    padding: 28px 24px 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 6px 24px rgba(62, 39, 35, 0.05);
+  }
+  .gift-label {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    color: var(--brown);
+    margin-bottom: 6px;
+  }
+  .gift h2 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 500;
+    font-size: 1.7rem;
+    color: var(--espresso);
+    margin-bottom: 10px;
+  }
+  .gift p {
+    font-size: 1rem;
+    color: var(--espresso);
+    margin-bottom: 20px;
+  }
+
+  /* כפתורים */
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 999px;
+    font-family: 'Heebo', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+  }
+  .btn:active { transform: scale(0.98); }
+  .btn + .btn { margin-top: 10px; }
+  .btn-main { background: var(--espresso); color: var(--cream); }
+  .btn-soft {
+    background: transparent;
+    color: var(--espresso);
+    border: 1px solid var(--brown);
+  }
+
+  /* הוראות התקנה */
+  details {
+    margin-top: 16px;
+    text-align: right;
+    border-top: 1px solid var(--sand);
+    padding-top: 14px;
+  }
+  summary {
+    cursor: pointer;
+    list-style: none;
+    text-align: center;
+    color: var(--brown);
+    font-size: 0.95rem;
+    font-weight: 400;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: " ▾"; }
+  details[open] summary::after { content: " ▴"; }
+  .steps { margin-top: 14px; }
+  .steps h3 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 500;
+    font-size: 1.05rem;
+    margin: 12px 0 6px;
+  }
+  .steps ol { padding-right: 20px; font-size: 0.95rem; }
+  .steps li { margin-bottom: 4px; }
+
+  /* חתימה */
+  footer { text-align: center; margin-top: 36px; }
+  .blessing {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 1.1rem;
+    color: var(--espresso);
+    line-height: 1.7;
+  }
+  .signature { margin-top: 22px; color: var(--ink); }
+  .signature .name {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .signature .hallelujah {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    margin-top: 2px;
+  }
+  .insta {
+    display: inline-block;
+    margin-top: 22px;
+    color: var(--brown);
+    font-size: 0.9rem;
+    text-decoration: none;
+    border-bottom: 1px solid var(--rose);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <img class="avatar" src="https://adeleedry-milim-tovot.netlify.app/adel.jpg" alt="אדל אדרי">
+    <div class="brand">אדל אדרי</div>
+    <div class="tagline">השראה ותודעה</div>
+    <div class="divider"></div>
+    <p class="intro">מתנות קטנות שאני מעניקה לך באהבה 🤍</p>
+  </header>
+
+  <!-- מתנה 1: האפליקציה -->
+  <section class="gift">
+    <div class="gift-label">מתנה ראשונה</div>
+    <h2>מילים טובות</h2>
+    <p>אפליקציה חינמית ששולחת לך מסר של השראה פעמיים ביום, בבוקר ובערב, ישר לטלפון.</p>
+    <a class="btn btn-main" href="https://milim-tovot.netlify.app" target="_blank" rel="noopener">לאפליקציה ✨</a>
+
+    <details>
+      <summary>איך מתקינים?</summary>
+      <div class="steps">
+        <h3>אייפון</h3>
+        <ol>
+          <li>פותחת את הקישור בספארי (לא מתוך אינסטגרם).</li>
+          <li>לוחצת למטה על כפתור השיתוף (ריבוע עם חץ), ובוחרת "הוספה למסך הבית".</li>
+          <li>פותחת את אדל מהאייקון החדש, לוחצת על "התראות", ואז "כן, אשמח" ו"אפשר".</li>
+          <li>סוגרת את האפליקציה ופותחת שוב ✅</li>
+        </ol>
+        <h3>אנדרואיד</h3>
+        <ol>
+          <li>פותחת את הקישור בכרום (לא מתוך אינסטגרם).</li>
+          <li>לוחצת על "התראות", ואז "כן, אשמח" ו"אפשר".</li>
+          <li>סוגרת את האפליקציה ופותחת שוב ✅</li>
+        </ol>
+      </div>
+    </details>
+  </section>
+
+  <!-- מתנה 2: הפלייליסט -->
+  <section class="gift">
+    <div class="gift-label">מתנה שנייה</div>
+    <h2>הפלייליסט שלי</h2>
+    <p>השירים שמלווים אותי ונותנים לי כוח, אור והשראה. עכשיו הם גם שלך 🎶</p>
+    <a class="btn btn-main" href="https://open.spotify.com/playlist/3bcOy9y0ne1tdhCdl3BthH" target="_blank" rel="noopener">להאזנה בספוטיפיי</a>
+    <a class="btn btn-soft" href="https://youtube.com/playlist?list=PLf2saC0pqNTySupkytumnxVSb2gPXFQco" target="_blank" rel="noopener">לצפייה ביוטיוב</a>
+  </section>
+
+  <footer>
+    <div class="blessing">ברכות על ראשך<br>תודה תודה תודה</div>
+    <div class="signature">
+      <div class="name">אדל אדרי</div>
+      <div class="hallelujah">ה.ל.ל.ו.י.ה</div>
+    </div>
+    <a class="insta" href="https://instagram.com/adeleedry" target="_blank" rel="noopener" dir="ltr">@adeleedry</a>
+  </footer>
+
+</div>
+</body>
+</html>
